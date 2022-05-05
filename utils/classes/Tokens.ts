@@ -185,6 +185,7 @@ class Expression {
     terms: Array<Term> = [];
 
     setExpression(decl: String) {
+
         let orIndex = decl.indexOf('|');
         
         if (orIndex !== -1) {

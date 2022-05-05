@@ -7,10 +7,13 @@ export class KeywordDecl {
 
     setCharacterSetDecl(decl: String) {
 
-        console.log("esto es lo que viene de KEYWORDS  ", decl)
+        console.log("esto es lo que viene de KEYWORD  ", decl)
 
         const equalIndex = decl.indexOf('=');
+        console.log("signo ", equalIndex)
+
         this.ident = decl.substr(0, equalIndex).trim();
+        console.log("no se  ", this.ident)
 
         const setString = decl.substr(equalIndex + 1, decl.length).trim().replace('.', '').replace('"', '').replace('"', '');
         this.set = setString;

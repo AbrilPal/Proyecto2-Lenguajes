@@ -46,6 +46,7 @@ export const readLines = function(lines: Array<String>): Compiler {
 
             // Si la fase es CHARACTERS registrar la linea
             if (phase == phases.CHARACTERS && line != phases.CHARACTERS) {
+                console.log("linea ", line)
                 compiler.charactersLines.push(line);
             }
 
