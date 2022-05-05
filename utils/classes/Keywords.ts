@@ -6,6 +6,9 @@ export class KeywordDecl {
     constructor() {};
 
     setCharacterSetDecl(decl: String) {
+
+        console.log("esto es lo que viene de KEYWORDS  ", decl)
+
         const equalIndex = decl.indexOf('=');
         this.ident = decl.substr(0, equalIndex).trim();
 
