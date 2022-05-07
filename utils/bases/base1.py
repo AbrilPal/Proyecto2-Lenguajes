@@ -13,19 +13,19 @@ class Link:
         self.label = label
 
 def separate_words(fileRead):
-    print(fileRead)
+    print()
+    print("entrada: ", fileRead)
+    print()
     words = []
     currentWord = ''
     for character in fileRead:
         if character != " ":
             currentWord = currentWord + character
         else:
-            print(currentWord, "  i")
             words.append(currentWord)
             currentWord = ''
     
     if currentWord != '':
-        print(currentWord, " uuu ")
         words.append(currentWord)
     
     return words

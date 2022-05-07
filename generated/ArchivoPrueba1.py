@@ -13,19 +13,19 @@ class Link:
         self.label = label
 
 def separate_words(fileRead):
-    print(fileRead)
+    print()
+    print("entrada: ", fileRead)
+    print()
     words = []
     currentWord = ''
     for character in fileRead:
         if character != " ":
             currentWord = currentWord + character
         else:
-            print(currentWord, "  i")
             words.append(currentWord)
             currentWord = ''
     
     if currentWord != '':
-        print(currentWord, " uuu ")
         words.append(currentWord)
     
     return words
@@ -123,29 +123,21 @@ def is_String(cadena):
 
 # Test
 
-print()
-print(words)
-print()
-
 for word in words:
     # si es keyword
-    if word == '':
-        print("EspacioEnBlanco")
     if test_word(word, keywordsNodes, keywordsLinks):
         keywords.append(word)
     elif test_word(word, nodes, links):
         tokens.append(word)
 
+print("TOKENS: ")
 for token in tokens:
-    if is_Int(token) == True:
-        print("numeroEntero", token)
-    elif is_Decimal(token) == True:
-        print("numeroDecimal", token)
-    elif is_String(token) == True:
-        print("cadena", token)
+    print(token)
 
-print("TOKENS: holi prueba ")
-print(tokens)
+print()
 
 print("\rKEYWORDS: ")
-print(keywords)
+for keyword in keywords:
+    print(keyword)
+
+print()
