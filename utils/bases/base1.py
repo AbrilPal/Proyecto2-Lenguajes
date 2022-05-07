@@ -96,4 +96,6 @@ links = []
 keywordsNodes = []
 keywordsLinks = []
 
+keywordsDeclaration = []
+
 

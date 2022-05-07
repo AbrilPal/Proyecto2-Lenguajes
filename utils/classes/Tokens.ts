@@ -257,7 +257,6 @@ export class TokenDeclaration {
         // Ident
         const equalIndex = decl.indexOf('=');
         this.ident = decl.substring(0, equalIndex).trim();
-        console.log("no se ee ", this.ident)
 
         // Expression
         const expression = decl.substring(equalIndex + 1, decl.length - 1).trim();

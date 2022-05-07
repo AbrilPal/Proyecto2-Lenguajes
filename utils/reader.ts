@@ -46,7 +46,6 @@ export const readLines = function(lines: Array<String>): Compiler {
 
             // Si la fase es CHARACTERS registrar la linea
             if (phase == phases.CHARACTERS && line != phases.CHARACTERS) {
-                console.log("linea ", line)
                 compiler.charactersLines.push(line);
             }
 
@@ -116,6 +115,11 @@ export const writePythonFile = function(compiler: Compiler, afd: Afd, keywordsAf
         content = content + `keywordsLinks.append(Link('${link['source']}', '${link['target']}', '${link['label']}'))\r`;
     });
     content = content + '\r'
+
+    compiler.keywordsDeclarations.map((item) => {
+        content = content + `keywordsDeclaration.append(['${item.ident}', '${item.set}'])\r`;
+     })
+ 
 
     // agregar segunda parte del programa
     content = content + base2.toString('utf8');

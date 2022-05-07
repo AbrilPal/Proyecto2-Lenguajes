@@ -22,8 +22,6 @@ def is_String(cadena):
     else:
         return False
 
-# Test
-
 for word in words:
     # si es keyword
     if test_word(word, keywordsNodes, keywordsLinks):
@@ -38,7 +36,9 @@ for token in tokens:
 print()
 
 print("\rKEYWORDS: ")
-for keyword in keywords:
-    print(keyword)
+for i in keywordsDeclaration:
+    for keyword in keywords:
+        if i[1] == keyword:
+            print(i[0], " -> ", keyword)
 
 print()

@@ -34,7 +34,7 @@ compiler.tokensLines.forEach(line => {
 });
 
 
-console.log(compiler.name);
+console.log("Compilando... ", compiler.name);
 compiler.charactersSetDeclarations.forEach(setDecl => {
     setDecl.toRegularExpression(compiler.charactersSetDeclarations);
 });

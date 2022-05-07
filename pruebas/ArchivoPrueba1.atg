@@ -9,7 +9,8 @@ digito = "01".
 
 KEYWORDS
 
-i = "if".
+iff = "if".
+whileee = "while".
 
 TOKENS
 
